@@ -14,6 +14,7 @@ def index():
 
 
 # GET  /register => 登録画面を表示
+
 # POST /register => 登録処理をする
 @app.route('/register',methods=["GET", "POST"])
 def register():
