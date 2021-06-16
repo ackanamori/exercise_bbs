@@ -168,6 +168,7 @@ def del_task():
     conn.commit()
     c.close()
     return redirect("/bbs")
+    #キャンセルを選択したら、ダイアログを閉じて終わるだけ削除するを選択されたら、削除しにいく 
 
 
 @app.errorhandler(403)
