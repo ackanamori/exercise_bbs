@@ -106,6 +106,7 @@ def add():
     conn = sqlite3.connect('service.db')
     c = conn.cursor()
     # DBにデータを追加する
+    #aoiue
     c.execute("insert into bbs values(null,?,?)", (user_id, comment))
     conn.commit()
     conn.close()
