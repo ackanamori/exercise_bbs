@@ -13,7 +13,7 @@ def index():
     return render_template('index.html')
 
 # new
-
+# new 2
 
 # GET  /register => 登録画面を表示
 # POST /register => 登録処理をする
