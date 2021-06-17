@@ -1,5 +1,5 @@
 # splite3をimportする
-import sqlite3 ,datetime
+import sqlite3
 # flaskをimportしてflaskを使えるようにする
 from flask import Flask , render_template , request , redirect , session
 # appにFlaskを定義して使えるようにしています。Flask クラスのインスタンスを作って、 app という変数に代入しています。
@@ -16,7 +16,6 @@ def index():
 
 
 # GET  /register => 登録画面を表示
-
 # POST /register => 登録処理をする
 @app.route('/register',methods=["GET", "POST"])
 def register():
@@ -105,9 +104,6 @@ def add():
     user_id = session['user_id']
     # フォームから入力されたアイテム名の取得
     comment = request.form.get("comment")
-    datetime= request.form.get("datetime")
-    datetime.now()
-    print(now)
     conn = sqlite3.connect('service.db')
     c = conn.cursor()
     # DBにデータを追加する
@@ -175,8 +171,7 @@ def del_task():
     conn.commit()
     c.close()
     return redirect("/bbs")
-    #キャンセルを選択したら、ダイアログを閉じて終わるだけ削除するを選択されたら、削除しにいく 
-    # aoiueo
+
 
 @app.errorhandler(403)
 def mistake403(code):
