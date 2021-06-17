@@ -112,7 +112,7 @@ def add():
     c = conn.cursor()
     # DBにデータを追加する
     # status.created_at
-    c.execute("insert into bbs values(null,?,?)", (user_id, comment, datetime))
+    c.execute("insert into bbs values(null,?,?)", (user_id, comment, datetime,))
     conn.commit()
     conn.close()
     return redirect('/bbs')
