@@ -1,5 +1,5 @@
 # splite3をimportする
-import sqlite3
+import sqlite3 ,datetime
 # flaskをimportしてflaskを使えるようにする
 from flask import Flask , render_template , request , redirect , session
 # appにFlaskを定義して使えるようにしています。Flask クラスのインスタンスを作って、 app という変数に代入しています。
@@ -104,6 +104,9 @@ def add():
     user_id = session['user_id']
     # フォームから入力されたアイテム名の取得
     comment = request.form.get("comment")
+    datetime= request.form.get("datetime")
+    datetime.now()
+    print(now)
     conn = sqlite3.connect('service.db')
     c = conn.cursor()
     # DBにデータを追加する
