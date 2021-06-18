@@ -1,3 +1,5 @@
+# new kanamoriです
+
 # splite3をimportする
 import sqlite3 ,datetime
 # flaskをimportしてflaskを使えるようにする
@@ -13,7 +15,6 @@ def index():
     return render_template('index.html')
 
 # new
-
 
 # GET  /register => 登録画面を表示
 # POST /register => 登録処理をする
